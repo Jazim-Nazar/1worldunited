@@ -36,7 +36,7 @@ const config: Config = {
         hero: ['clamp(3.5rem, 10vw, 7.5rem)', { lineHeight: '0.92', letterSpacing: '0' }],
         section: ['clamp(2.35rem, 5vw, 4rem)', { lineHeight: '0.95', letterSpacing: '0' }],
         stat: ['clamp(3.4rem, 6vw, 5rem)', { lineHeight: '0.9', letterSpacing: '0' }],
-        label: ['0.625rem', { lineHeight: '0.75rem', letterSpacing: '0.12em' }],
+        label: ['0.875rem', { lineHeight: '1rem', letterSpacing: '0.12em' }],
       },
       spacing: {
         container: '1440px',

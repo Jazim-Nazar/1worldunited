@@ -123,7 +123,7 @@ export const footerColumns: FooterColumn[] = [
   },
   {
     title: 'Direct Contact',
-    lines: ['+965 6662 3543', 'team@oneworldunited.com'],
+    lines: ['+965 6662 3543', 'projects@oneworldunited.com'],
     icon: Phone,
   },
 ]

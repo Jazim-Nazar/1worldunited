@@ -153,13 +153,13 @@ export function RaisedFlooringPage() {
         <section className="bg-brand-black text-white relative py-20 border-b border-white/10">
           <Container>
             <a 
-              className="inline-flex items-center gap-2 font-mono text-[10px] font-bold uppercase tracking-[0.15em] text-brand-blue hover:text-white transition-colors mb-8"
+              className="inline-flex items-center gap-2 font-mono text-sm font-bold uppercase tracking-[0.15em] text-brand-blue hover:text-white transition-colors mb-8"
               href="#/"
             >
               <ArrowLeft size={12} /> Back to Home
             </a>
             <Reveal>
-              <span className="font-mono text-label font-bold uppercase text-brand-red tracking-[0.2em] block mb-3">Service 02</span>
+              <span className="font-mono text-sm font-bold uppercase text-brand-red tracking-[0.2em] block mb-3">Service 02</span>
               <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl uppercase leading-none max-w-4xl">
                 Specialized Raised<br/>
                 <span className="text-brand-blue">Access Flooring Systems</span>
@@ -190,7 +190,7 @@ export function RaisedFlooringPage() {
 
             <Reveal delay={0.1}>
               <div className="bg-surface-muted p-8 border border-line shadow-hard">
-                <h3 className="font-mono text-label font-bold uppercase text-brand-blue tracking-wider block mb-6">Key Benefits</h3>
+                <h3 className="font-mono text-sm font-bold uppercase text-brand-blue tracking-wider block mb-6">Key Benefits</h3>
                 <div className="grid gap-4 sm:grid-cols-2">
                   {[
                     'Flexible cable & service management',
@@ -202,7 +202,7 @@ export function RaisedFlooringPage() {
                     'Increased safety and aesthetics',
                     'Adaptable for future expansion'
                   ].map((benefit) => (
-                    <div className="flex gap-2.5 items-start text-xs font-body text-ink-soft" key={benefit}>
+                    <div className="flex gap-2.5 items-start text-sm font-body text-ink-soft" key={benefit}>
                       <span className="grid size-5 place-items-center bg-brand-blue/5 text-brand-blue border border-brand-blue/15 shrink-0 rounded-sm">
                         <Check size={12} />
                       </span>
@@ -219,9 +219,9 @@ export function RaisedFlooringPage() {
         <section className="py-20 bg-surface-muted/30 border-b border-line">
           <Container>
             <Reveal className="text-center max-w-2xl mx-auto mb-16">
-              <span className="font-mono text-label font-bold uppercase text-brand-red tracking-[0.2em]">Matrix</span>
+              <span className="font-mono text-sm font-bold uppercase text-brand-red tracking-[0.2em]">Matrix</span>
               <h2 className="font-display text-3xl sm:text-4xl uppercase text-ink mt-3">Architectural Access Floor Profiles</h2>
-              <p className="mt-4 font-body text-xs leading-5 text-ink-muted">
+              <p className="mt-4 font-body text-sm leading-5 text-ink-muted">
                 Explore our eight distinct engineered access floor systems, each tailored to specific facility loads, electrical standards, and architectural requirements.
               </p>
             </Reveal>
@@ -240,7 +240,7 @@ export function RaisedFlooringPage() {
                     onClick={() => setActiveTab(profile.id)}
                     type="button"
                   >
-                    <span className="font-mono text-[9px] font-bold block mr-2 text-brand-red">Profile {profile.id}</span>
+                    <span className="font-mono text-sm font-bold block mr-2 text-brand-red">Profile {profile.id}</span>
                     {profile.title}
                   </button>
                 ))}
@@ -255,7 +255,7 @@ export function RaisedFlooringPage() {
                     alt={currentProfile.title}
                     className="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute top-4 left-4 bg-brand-black/90 text-white font-mono text-[8px] uppercase tracking-wider px-2 py-1">
+                  <div className="absolute top-4 left-4 bg-brand-black/90 text-white font-mono text-sm uppercase tracking-wider px-2 py-1">
                     System Model {currentProfile.id}
                   </div>
                 </div>
@@ -263,23 +263,23 @@ export function RaisedFlooringPage() {
                 {/* Technical data summary */}
                 <div className="flex flex-col justify-between">
                   <div>
-                    <span className="font-mono text-[10px] font-bold text-brand-blue uppercase tracking-wider block mb-2">Architectural Blueprint</span>
+                    <span className="font-mono text-sm font-bold text-brand-blue uppercase tracking-wider block mb-2">Architectural Blueprint</span>
                     <h3 className="font-display text-3xl uppercase text-ink mb-6">{currentProfile.title}</h3>
                     
                     <div className="space-y-4">
                       <div className="border-t border-line pt-3">
-                        <span className="font-mono text-[9px] font-bold text-brand-red uppercase block">Recommended Flooring Type</span>
-                        <p className="font-body text-xs text-ink-soft leading-relaxed mt-1 font-semibold">{currentProfile.type}</p>
+                        <span className="font-mono text-sm font-bold text-brand-red uppercase block">Recommended Flooring Type</span>
+                        <p className="font-body text-sm text-ink-soft leading-relaxed mt-1 font-semibold">{currentProfile.type}</p>
                       </div>
 
                       <div className="border-t border-line pt-3">
-                        <span className="font-mono text-[9px] font-bold text-brand-red uppercase block">Top Finish & Coating</span>
-                        <p className="font-body text-xs text-ink-soft leading-relaxed mt-1">{currentProfile.finish}</p>
+                        <span className="font-mono text-sm font-bold text-brand-red uppercase block">Top Finish & Coating</span>
+                        <p className="font-body text-sm text-ink-soft leading-relaxed mt-1">{currentProfile.finish}</p>
                       </div>
 
                       <div className="border-t border-line pt-3">
-                        <span className="font-mono text-[9px] font-bold text-brand-red uppercase block">Core Layers Composition</span>
-                        <ul className="mt-2 space-y-1.5 font-body text-xs text-ink-soft pl-4 list-decimal">
+                        <span className="font-mono text-sm font-bold text-brand-red uppercase block">Core Layers Composition</span>
+                        <ul className="mt-2 space-y-1.5 font-body text-sm text-ink-soft pl-4 list-decimal">
                           {currentProfile.layers.map((layer, idx) => (
                             <li key={idx} className="leading-relaxed">{layer}</li>
                           ))}
@@ -289,8 +289,8 @@ export function RaisedFlooringPage() {
                   </div>
 
                   <div className="border-t border-line pt-4 mt-6 bg-surface-muted/40 p-4 border-l-2 border-brand-blue">
-                    <span className="font-mono text-[8px] font-bold text-ink-muted uppercase block">Primary Application Case</span>
-                    <p className="font-body text-xs text-ink-soft leading-relaxed mt-1 italic">{currentProfile.app}</p>
+                    <span className="font-mono text-sm font-bold text-ink-muted uppercase block">Primary Application Case</span>
+                    <p className="font-body text-sm text-ink-soft leading-relaxed mt-1 italic">{currentProfile.app}</p>
                   </div>
                 </div>
               </div>
@@ -302,25 +302,25 @@ export function RaisedFlooringPage() {
         <section className="py-20 border-b border-line">
           <Container className="grid gap-12 md:grid-cols-3">
             <Reveal className="p-6 border border-line bg-white shadow-hard relative">
-              <span className="font-mono text-xs text-brand-red block mb-4">01 / LOAD PROFILE</span>
+              <span className="font-mono text-sm text-brand-red block mb-4">01 / LOAD PROFILE</span>
               <h4 className="font-display text-xl uppercase text-ink">Heavy-load engineering</h4>
-              <p className="mt-3 font-body text-xs leading-relaxed text-ink-soft">
+              <p className="mt-3 font-body text-sm leading-relaxed text-ink-soft">
                 All panels and steel/aluminum bases are load-rated. Designed to support heavy rack corridors, transformers, switchgear, and factory machinery vaults with zero deflection.
               </p>
             </Reveal>
 
             <Reveal className="p-6 border border-line bg-white shadow-hard relative" delay={0.08}>
-              <span className="font-mono text-xs text-brand-red block mb-4">02 / ESD CONTROL</span>
+              <span className="font-mono text-sm text-brand-red block mb-4">02 / ESD CONTROL</span>
               <h4 className="font-display text-xl uppercase text-ink">Static dissipation & Safety</h4>
-              <p className="mt-3 font-body text-xs leading-relaxed text-ink-soft">
+              <p className="mt-3 font-body text-sm leading-relaxed text-ink-soft">
                 Features conductive vinyl tile finishes, copper grounding strips, and HPL coverings engineered to dissipate electrostatic charges, preventing damage to sensitive microchips.
               </p>
             </Reveal>
 
             <Reveal className="p-6 border border-line bg-white shadow-hard relative" delay={0.16}>
-              <span className="font-mono text-xs text-brand-red block mb-4">03 / STRUCTURAL CORE</span>
+              <span className="font-mono text-sm text-brand-red block mb-4">03 / STRUCTURAL CORE</span>
               <h4 className="font-display text-xl uppercase text-ink">Non-combustible composition</h4>
-              <p className="mt-3 font-body text-xs leading-relaxed text-ink-soft">
+              <p className="mt-3 font-body text-sm leading-relaxed text-ink-soft">
                 Utilizes high-density calcium sulphate panels, solid cementitious matrices, or woodcore materials wrapped in galvanized steel sheets for high thermal, acoustic, and fire resistance.
               </p>
             </Reveal>

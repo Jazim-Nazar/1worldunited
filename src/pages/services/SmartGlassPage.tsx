@@ -21,13 +21,13 @@ export function SmartGlassPage() {
         <section className="bg-brand-black text-white relative py-20 border-b border-white/10">
           <Container>
             <a 
-              className="inline-flex items-center gap-2 font-mono text-[10px] font-bold uppercase tracking-[0.15em] text-brand-blue hover:text-white transition-colors mb-8"
+              className="inline-flex items-center gap-2 font-mono text-sm font-bold uppercase tracking-[0.15em] text-brand-blue hover:text-white transition-colors mb-8"
               href="#/"
             >
               <ArrowLeft size={12} /> Back to Home
             </a>
             <Reveal>
-              <span className="font-mono text-label font-bold uppercase text-brand-red tracking-[0.2em] block mb-3">Service 04</span>
+              <span className="font-mono text-sm font-bold uppercase text-brand-red tracking-[0.2em] block mb-3">Service 04</span>
               <h1 className="font-display text-4xl sm:text-6xl lg:text-7xl uppercase leading-none max-w-4xl">
                 Smart Glass<br/>
                 <span className="text-brand-blue">Technologies</span>
@@ -62,7 +62,7 @@ export function SmartGlassPage() {
                   alt="Smart Glass Sliding Partition Walls" 
                   className="w-full aspect-[4/3] object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute bottom-4 left-4 bg-brand-black/95 text-white font-mono text-[9px] uppercase tracking-wider px-3 py-1.5 border-l-2 border-brand-red">
+                <div className="absolute bottom-4 left-4 bg-brand-black/95 text-white font-mono text-sm uppercase tracking-wider px-3 py-1.5 border-l-2 border-brand-red">
                   Sliding Door Installation
                 </div>
               </div>
@@ -75,7 +75,7 @@ export function SmartGlassPage() {
           <Container>
             <div className="grid gap-12 lg:grid-cols-[1.2fr_1fr] items-center">
               <Reveal>
-                <span className="font-mono text-label font-bold uppercase text-brand-red tracking-[0.2em] block mb-3">Simulator</span>
+                <span className="font-mono text-sm font-bold uppercase text-brand-red tracking-[0.2em] block mb-3">Simulator</span>
                 <h3 className="font-display text-3xl uppercase text-ink">Privacy Glazing Control Simulator</h3>
                 <p className="mt-4 font-body text-sm leading-6 text-ink-soft">
                   See how Liquid Crystal PDLC technology works in real-time. Toggle the state below to switch between full transparency and a frosted opaque privacy screen.
@@ -84,7 +84,7 @@ export function SmartGlassPage() {
                 {/* State Toggler Button */}
                 <div className="mt-8 flex items-center gap-4">
                   <button
-                    className={`font-mono text-xs uppercase tracking-wider font-bold px-6 py-3 border.5 transition-all flex items-center gap-2 ${
+                    className={`font-mono text-sm uppercase tracking-wider font-bold px-6 py-3 border.5 transition-all flex items-center gap-2 ${
                       !isGlassOpaque 
                         ? 'bg-brand-blue border-brand-blue text-white shadow-hard' 
                         : 'bg-white border-line text-ink hover:bg-surface-muted'
@@ -96,7 +96,7 @@ export function SmartGlassPage() {
                   </button>
 
                   <button
-                    className={`font-mono text-xs uppercase tracking-wider font-bold px-6 py-3 border.5 transition-all flex items-center gap-2 ${
+                    className={`font-mono text-sm uppercase tracking-wider font-bold px-6 py-3 border.5 transition-all flex items-center gap-2 ${
                       isGlassOpaque 
                         ? 'bg-brand-red border-brand-red text-white shadow-hard' 
                         : 'bg-white border-line text-ink hover:bg-surface-muted'
@@ -108,7 +108,7 @@ export function SmartGlassPage() {
                   </button>
                 </div>
 
-                <div className="mt-8 font-body text-xs text-ink-soft bg-white p-5 border border-line border-l-2 border-brand-blue leading-6">
+                <div className="mt-8 font-body text-sm text-ink-soft bg-white p-5 border border-line border-l-2 border-brand-blue leading-6">
                   <strong>How it works:</strong> In the <strong>ON state</strong>, an electric current aligns the polymer-dispersed liquid crystals (PDLC) inside the glass film, allowing light to pass directly. In the <strong>OFF state</strong>, crystals scatter light randomly, blocking visibility while still letting in diffuse natural light.
                 </div>
               </Reveal>
@@ -129,16 +129,16 @@ export function SmartGlassPage() {
                       isGlassOpaque ? 'opacity-100 scale-100 pointer-events-auto' : 'opacity-0 scale-[1.01] pointer-events-none'
                     }`}
                   >
-                    <div className="bg-brand-black/90 text-white font-mono text-[9px] uppercase tracking-widest px-4 py-2 border-l border-brand-red">
+                    <div className="bg-brand-black/90 text-white font-mono text-sm uppercase tracking-widest px-4 py-2 border-l border-brand-red">
                       Opaque Mode: Frosted Partition
                     </div>
                   </div>
                   
-                  <div className="absolute top-4 right-4 z-10 bg-brand-black/90 text-white font-mono text-[8px] uppercase tracking-widest px-2.5 py-1">
+                  <div className="absolute top-4 right-4 z-10 bg-brand-black/90 text-white font-mono text-sm uppercase tracking-widest px-2.5 py-1">
                     {!isGlassOpaque ? 'PDLC ON: Clear' : 'PDLC OFF: Private'}
                   </div>
                 </div>
-                <span className="font-body text-[10px] text-ink-muted mt-3 italic">
+                <span className="font-body text-sm text-ink-muted mt-3 italic">
                   Interactive representation of active electro-chromic partitioning.
                 </span>
               </Reveal>
@@ -150,7 +150,7 @@ export function SmartGlassPage() {
         <section className="py-20 border-b border-line">
           <Container>
             <Reveal>
-              <span className="font-mono text-label font-bold uppercase text-brand-blue tracking-[0.2em] block mb-3">Technologies</span>
+              <span className="font-mono text-sm font-bold uppercase text-brand-blue tracking-[0.2em] block mb-3">Technologies</span>
               <h2 className="font-display text-3xl sm:text-4xl uppercase text-ink mb-12">Main Smart Glass Configurations</h2>
               
               <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-5">
@@ -167,7 +167,7 @@ export function SmartGlassPage() {
                       <div>
                         <Icon className="text-brand-blue mb-4" size={20} />
                         <h4 className="font-display text-lg uppercase text-ink mb-2">{tech.title}</h4>
-                        <p className="font-body text-[11px] leading-relaxed text-ink-soft">{tech.desc}</p>
+                        <p className="font-body text-sm leading-relaxed text-ink-soft">{tech.desc}</p>
                       </div>
                     </div>
                   )
@@ -186,25 +186,25 @@ export function SmartGlassPage() {
 
             <div className="grid gap-8 md:grid-cols-3">
               <Reveal className="bg-white p-8 border border-line shadow-hard" delay={0.05}>
-                <span className="font-mono text-xs text-brand-red block mb-4">01 / COMMERCIAL</span>
+                <span className="font-mono text-sm text-brand-red block mb-4">01 / COMMERCIAL</span>
                 <h4 className="font-display text-2xl uppercase text-ink mb-3">Corporate & Public Space</h4>
-                <p className="font-body text-xs leading-6 text-ink-soft">
+                <p className="font-body text-sm leading-6 text-ink-soft">
                   Office conference rooms, executive partitions, hospital clinic isolation rooms, hotel room partitioning, retail storefront mockups, and secure airport terminals.
                 </p>
               </Reveal>
 
               <Reveal className="bg-white p-8 border border-line shadow-hard" delay={0.1}>
-                <span className="font-mono text-xs text-brand-red block mb-4">02 / RESIDENTIAL</span>
+                <span className="font-mono text-sm text-brand-red block mb-4">02 / RESIDENTIAL</span>
                 <h4 className="font-display text-2xl uppercase text-ink mb-3">Luxury Homes & Villas</h4>
-                <p className="font-body text-xs leading-6 text-ink-soft">
+                <p className="font-body text-sm leading-6 text-ink-soft">
                   Switchable bathroom window dividers, home offices, master suite partitions, facade skylights, residential entranceways, and smart house layouts.
                 </p>
               </Reveal>
 
               <Reveal className="bg-white p-8 border border-line shadow-hard" delay={0.15}>
-                <span className="font-mono text-xs text-brand-red block mb-4">03 / WELLNESS & FITNESS</span>
+                <span className="font-mono text-sm text-brand-red block mb-4">03 / WELLNESS & FITNESS</span>
                 <h4 className="font-display text-2xl uppercase text-ink mb-3">Spas & Private Suites</h4>
-                <p className="font-body text-xs leading-6 text-ink-soft">
+                <p className="font-body text-sm leading-6 text-ink-soft">
                   Private gyms, hammams, massage rooms, indoor pool enclosures, spa suites, luxury hydrotherapy zones, and specialized resort facilities.
                 </p>
               </Reveal>
@@ -217,7 +217,7 @@ export function SmartGlassPage() {
           <Container className="grid gap-12 lg:grid-cols-2">
             <Reveal>
               <h3 className="font-display text-2xl uppercase text-ink mb-6">Core Advantages</h3>
-              <ul className="space-y-3 font-body text-xs text-ink-soft">
+              <ul className="space-y-3 font-body text-sm text-ink-soft">
                 {[
                   'Instant Privacy - Shift from clear view to opaque in under a second.',
                   'Premium Aesthetics - Clean minimalist glazing lines with no hanging fabric.',
@@ -240,20 +240,20 @@ export function SmartGlassPage() {
               <h3 className="font-display text-2xl uppercase text-ink mb-6">Recommendations & Considerations</h3>
               <div className="space-y-4">
                 <div className="bg-surface-muted p-5 border border-line">
-                  <h4 className="font-mono text-[9px] font-bold uppercase tracking-wider text-brand-red">PDLC Privacy Application</h4>
-                  <p className="font-body text-xs text-ink-soft mt-1 leading-relaxed">
+                  <h4 className="font-mono text-sm font-bold uppercase tracking-wider text-brand-red">PDLC Privacy Application</h4>
+                  <p className="font-body text-sm text-ink-soft mt-1 leading-relaxed">
                     Recommended for interior doors, office conference partitions, and bathrooms where rapid ON/OFF opacity switching is required.
                   </p>
                 </div>
                 <div className="bg-surface-muted p-5 border border-line">
-                  <h4 className="font-mono text-[9px] font-bold uppercase tracking-wider text-brand-red">Electrochromic Facades & Skylights</h4>
-                  <p className="font-body text-xs text-ink-soft mt-1 leading-relaxed">
+                  <h4 className="font-mono text-sm font-bold uppercase tracking-wider text-brand-red">Electrochromic Facades & Skylights</h4>
+                  <p className="font-body text-sm text-ink-soft mt-1 leading-relaxed">
                     Recommended for large exterior building envelopes and roof domes. Allows slow, smooth adjustments to sunlight intensity to block heat.
                   </p>
                 </div>
                 <div className="bg-surface-muted p-5 border border-line">
-                  <h4 className="font-mono text-[9px] font-bold uppercase tracking-wider text-brand-red">SPD Solar Shading</h4>
-                  <p className="font-body text-xs text-ink-soft mt-1 leading-relaxed">
+                  <h4 className="font-mono text-sm font-bold uppercase tracking-wider text-brand-red">SPD Solar Shading</h4>
+                  <p className="font-body text-sm text-ink-soft mt-1 leading-relaxed">
                     Optimal for luxury cars, yachts, and premium boardrooms where glare levels must be dimmed manually via dimmer switches.
                   </p>
                 </div>

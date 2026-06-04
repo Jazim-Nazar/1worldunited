@@ -14,7 +14,7 @@ export function StatsSection() {
             <strong className={cn('block font-display text-stat font-normal', stat.accent === 'red' ? 'text-brand-red' : 'text-ink')}>
               <CountUpNumber end={Number.parseInt(stat.value, 10)} />
             </strong>
-            <p className="mt-4 font-mono text-label font-bold uppercase text-ink">{stat.label}</p>
+            <p className="mt-4 font-mono text-sm font-bold uppercase text-ink">{stat.label}</p>
             </article>
           </Reveal>
         ))}

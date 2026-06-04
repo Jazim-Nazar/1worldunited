@@ -38,7 +38,7 @@ export function ServicesSection() {
                   onClick={() => setOpenServiceId(isOpen ? null : service.id)}
                   type="button"
                 >
-                  <span className="font-mono text-[10px] font-bold text-brand-blue">{service.id}</span>
+                  <span className="font-mono text-sm font-bold text-brand-blue">{service.id}</span>
                   <span className="font-display text-2xl uppercase leading-none text-ink sm:text-3xl">{service.title}</span>
                   <ChevronDown
                     aria-hidden
@@ -58,7 +58,7 @@ export function ServicesSection() {
                       <p>{service.description}</p>
                       <a
                         href={serviceLinks[service.id]}
-                        className="inline-flex items-center gap-1.5 font-mono text-[9px] font-bold uppercase tracking-widest text-brand-blue hover:text-brand-red transition-colors mt-4"
+                        className="inline-flex items-center gap-1.5 font-mono text-sm font-bold uppercase tracking-widest text-brand-blue hover:text-brand-red transition-colors mt-4"
                       >
                         Explore Technology Specifications →
                       </a>

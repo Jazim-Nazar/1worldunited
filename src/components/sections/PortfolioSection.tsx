@@ -39,8 +39,8 @@ export function PortfolioSection() {
                   />
                   <div className="absolute inset-x-0 bottom-0 translate-y-full bg-brand-black/90 p-6 text-white transition-transform duration-300 group-hover:translate-y-0 group-focus:translate-y-0">
                     <h3 className="font-display text-2xl uppercase leading-none">{item.title}</h3>
-                    <p className="mt-3 font-body text-xs leading-5 text-white/75">{item.description}</p>
-                    <span className="inline-block mt-4 font-mono text-[8px] font-bold uppercase tracking-wider text-brand-blue group-hover:text-white transition-colors">
+                    <p className="mt-3 font-body text-sm leading-5 text-white/75">{item.description}</p>
+                    <span className="inline-block mt-4 font-mono text-sm font-bold uppercase tracking-wider text-brand-blue group-hover:text-white transition-colors">
                       Learn More & Specs →
                     </span>
                   </div>

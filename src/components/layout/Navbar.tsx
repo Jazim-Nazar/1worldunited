@@ -39,7 +39,7 @@ export function Navbar() {
                   <button
                     aria-expanded={dropdownOpen}
                     aria-haspopup="true"
-                    className="flex items-center gap-1.5 font-mono text-[10px] font-bold uppercase tracking-[0.12em] text-ink transition hover:text-brand-blue focus:outline-none focus:ring-2 focus:ring-brand-blue"
+                    className="flex items-center gap-1.5 font-mono text-sm md:text-sm font-bold uppercase tracking-[0.12em] text-ink transition hover:text-brand-blue focus:outline-none focus:ring-2 focus:ring-brand-blue"
                     onClick={() => setDropdownOpen(!dropdownOpen)}
                     type="button"
                   >
@@ -65,14 +65,14 @@ export function Navbar() {
                             role="menuitem"
                             onClick={() => setDropdownOpen(false)}
                           >
-                            <span className="font-mono text-[10px] font-bold text-brand-blue group-hover:text-brand-red transition-colors">
+                            <span className="font-mono text-sm font-bold text-brand-blue group-hover:text-brand-red transition-colors">
                               {service.id}
                             </span>
                             <div className="flex flex-col gap-1">
                               <span className="font-display text-sm uppercase tracking-wider text-ink group-hover:text-brand-blue transition-colors">
                                 {service.title}
                               </span>
-                              <span className="font-body text-xs text-ink-muted">
+                              <span className="font-body text-sm text-ink-muted">
                                 {service.description}
                               </span>
                             </div>
@@ -87,7 +87,7 @@ export function Navbar() {
 
             return (
               <a
-                className="relative font-mono text-[10px] font-bold uppercase tracking-[0.12em] text-ink transition hover:text-brand-blue focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2"
+                className="relative font-mono text-sm md:text-sm font-bold uppercase tracking-[0.12em] text-ink transition hover:text-brand-blue focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2"
                 href={item.href}
                 key={item.label}
               >
@@ -123,7 +123,7 @@ export function Navbar() {
                 return (
                   <div className="grid border-b border-line/50 pb-2" key={item.label}>
                     <button
-                      className="flex w-full items-center justify-between py-3 text-left font-mono text-xs font-bold uppercase tracking-[0.12em] text-ink"
+                      className="flex w-full items-center justify-between py-3.5 text-left font-mono text-sm font-bold uppercase tracking-[0.12em] text-ink"
                       onClick={() => setMobileDropdownOpen(!mobileDropdownOpen)}
                       type="button"
                     >
@@ -145,10 +145,10 @@ export function Navbar() {
                               setMobileDropdownOpen(false)
                             }}
                           >
-                            <span className="font-display text-[13px] uppercase tracking-wide text-ink">
+                            <span className="font-display text-sm uppercase tracking-wide text-ink">
                               {service.title}
                             </span>
-                            <span className="font-body text-[10px] text-ink-muted leading-relaxed mt-0.5">
+                            <span className="font-body text-sm text-ink-muted leading-relaxed mt-0.5">
                               {service.description}
                             </span>
                           </a>
@@ -161,7 +161,7 @@ export function Navbar() {
 
               return (
                 <a
-                  className="border-b border-line/50 py-3.5 font-mono text-xs font-bold uppercase tracking-[0.12em] text-ink"
+                  className="border-b border-line/50 py-4 font-mono text-sm font-bold uppercase tracking-[0.12em] text-ink"
                   href={item.href}
                   key={item.label}
                   onClick={() => setMobileOpen(false)}

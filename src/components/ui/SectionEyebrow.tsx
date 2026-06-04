@@ -10,7 +10,7 @@ export function SectionEyebrow({ children, color = 'blue', align = 'left' }: Sec
   return (
     <p
       className={cn(
-        'font-mono text-label font-bold uppercase',
+        'font-mono text-sm font-bold uppercase',
         color === 'blue' ? 'text-brand-blue' : 'text-brand-red',
         align === 'center' && 'text-center',
       )}
