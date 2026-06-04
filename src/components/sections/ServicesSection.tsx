@@ -14,7 +14,7 @@ const serviceLinks: Record<string, string> = {
 }
 
 export function ServicesSection() {
-  const [openServiceId, setOpenServiceId] = useState<string | null>('01')
+  const [openServiceId, setOpenServiceId] = useState<string | null>(null)
 
   return (
     <section aria-labelledby="services-heading" className="bg-white py-section-sm sm:py-section" id="services">
