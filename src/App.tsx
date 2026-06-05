@@ -5,6 +5,11 @@ import { PressureTestingPage } from './pages/services/PressureTestingPage'
 import { RaisedFlooringPage } from './pages/services/RaisedFlooringPage'
 import { RadiantClimatePage } from './pages/services/RadiantClimatePage'
 import { SmartGlassPage } from './pages/services/SmartGlassPage'
+import { ControlConsolesPage } from './pages/services/ControlConsolesPage'
+import { BatteryStoragePage } from './pages/services/BatteryStoragePage'
+import { HeatExchangersPage } from './pages/services/HeatExchangersPage'
+import { ElectricalInstrumentationPage } from './pages/services/ElectricalInstrumentationPage'
+import { SpecializedServicesPage } from './pages/services/SpecializedServicesPage'
 
 export default function App() {
   const [hash] = useHashLocation()
@@ -44,6 +49,21 @@ export default function App() {
   }
   if (hash.startsWith('#/services/smart-glass')) {
     return <SmartGlassPage />
+  }
+  if (hash.startsWith('#/services/control-consoles')) {
+    return <ControlConsolesPage />
+  }
+  if (hash.startsWith('#/services/battery-storage')) {
+    return <BatteryStoragePage />
+  }
+  if (hash.startsWith('#/services/heat-exchangers')) {
+    return <HeatExchangersPage />
+  }
+  if (hash.startsWith('#/services/electrical-instrumentation')) {
+    return <ElectricalInstrumentationPage />
+  }
+  if (hash.startsWith('#/services/specialized-services')) {
+    return <SpecializedServicesPage />
   }
 
   // Default to Home page

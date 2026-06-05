@@ -11,6 +11,11 @@ const serviceLinks: Record<string, string> = {
   '02': '#/services/raised-flooring',
   '03': '#/services/radiant-climate',
   '04': '#/services/smart-glass',
+  '05': '#/services/control-consoles',
+  '06': '#/services/battery-storage',
+  '07': '#/services/heat-exchangers',
+  '08': '#/services/electrical-instrumentation',
+  '09': '#/services/specialized-services',
 }
 
 export function ServicesSection() {
@@ -21,7 +26,7 @@ export function ServicesSection() {
       <Container>
         <Reveal>
           <SectionEyebrow>Core Services</SectionEyebrow>
-          <SectionHeading id="services-heading">Structural Ecosystem</SectionHeading>
+          <SectionHeading id="services-heading">Core Engineering & Technical Services</SectionHeading>
         </Reveal>
         <div className="mt-14 border-t border-line">
           {services.map((service) => {

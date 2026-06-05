@@ -63,7 +63,7 @@ export function Navbar() {
         if (element) {
           setTimeout(() => {
             element.scrollIntoView({ behavior: 'smooth', block: 'start' })
-          }, 150) // Small delay to let the drawer close transition start
+          }, 150)
           window.history.pushState(null, '', `#/#${sectionId}`)
         }
       }
@@ -99,34 +99,120 @@ export function Navbar() {
                     />
                   </button>
 
-                  {/* Dropdown Menu Card */}
+                  {/* Dropdown Mega Menu Card */}
                   {dropdownOpen && (
                     <div 
-                      className="absolute left-1/2 top-full mt-2 w-[480px] -translate-x-1/2 border border-line bg-white p-5 shadow-xl transition-all duration-200 animate-in fade-in slide-in-from-top-2"
+                      className="absolute left-1/2 top-full mt-2 w-[920px] -translate-x-[72%] border border-line bg-white p-6 shadow-2xl transition-all duration-200 animate-in fade-in slide-in-from-top-2 z-50"
                       role="menu"
                     >
-                      <div className="grid gap-4">
-                        {dropdownServices.map((service) => (
-                          <a
-                            className="group flex gap-4 p-2.5 transition hover:bg-surface-muted focus:outline-none focus:bg-surface-muted"
-                            href={service.href}
-                            key={service.id}
-                            role="menuitem"
-                            onClick={() => setDropdownOpen(false)}
-                          >
-                            <span className="font-mono text-sm font-bold text-brand-blue group-hover:text-brand-red transition-colors">
-                              {service.id}
-                            </span>
-                            <div className="flex flex-col gap-1">
-                              <span className="font-display text-sm uppercase tracking-wider text-ink group-hover:text-brand-blue transition-colors">
-                                {service.title}
-                              </span>
-                              <span className="font-body text-sm text-ink-muted">
-                                {service.description}
-                              </span>
-                            </div>
-                          </a>
-                        ))}
+                      <div className="grid grid-cols-4 gap-6">
+                        {/* Column 1: Mechanical & Fluid */}
+                        <div>
+                          <h4 className="font-mono text-sm font-bold uppercase tracking-widest text-brand-red border-b border-line pb-2 mb-3">
+                            Mechanical & Fluid
+                          </h4>
+                          <div className="grid gap-3">
+                            {dropdownServices
+                              .filter((s) => s.category === 'Mechanical & Fluid Systems')
+                              .map((service) => (
+                                <a
+                                  className="group flex flex-col gap-0.5 p-1.5 transition hover:bg-surface-muted focus:outline-none focus:bg-surface-muted rounded"
+                                  href={service.href}
+                                  key={service.id}
+                                  role="menuitem"
+                                  onClick={() => setDropdownOpen(false)}
+                                >
+                                  <span className="font-display text-base uppercase tracking-wide text-ink group-hover:text-brand-blue transition-colors">
+                                    {service.title}
+                                  </span>
+                                  <span className="font-body text-sm text-ink-muted leading-tight">
+                                    {service.description}
+                                  </span>
+                                </a>
+                              ))}
+                          </div>
+                        </div>
+
+                        {/* Column 2: Technical Environments */}
+                        <div>
+                          <h4 className="font-mono text-sm font-bold uppercase tracking-widest text-brand-red border-b border-line pb-2 mb-3">
+                            Technical Rooms
+                          </h4>
+                          <div className="grid gap-3">
+                            {dropdownServices
+                              .filter((s) => s.category === 'Technical Environments')
+                              .map((service) => (
+                                <a
+                                  className="group flex flex-col gap-0.5 p-1.5 transition hover:bg-surface-muted focus:outline-none focus:bg-surface-muted rounded"
+                                  href={service.href}
+                                  key={service.id}
+                                  role="menuitem"
+                                  onClick={() => setDropdownOpen(false)}
+                                >
+                                  <span className="font-display text-base uppercase tracking-wide text-ink group-hover:text-brand-blue transition-colors">
+                                    {service.title}
+                                  </span>
+                                  <span className="font-body text-sm text-ink-muted leading-tight">
+                                    {service.description}
+                                  </span>
+                                </a>
+                              ))}
+                          </div>
+                        </div>
+
+                        {/* Column 3: Advanced Building Tech */}
+                        <div>
+                          <h4 className="font-mono text-sm font-bold uppercase tracking-widest text-brand-red border-b border-line pb-2 mb-3">
+                            Advanced Building
+                          </h4>
+                          <div className="grid gap-3">
+                            {dropdownServices
+                              .filter((s) => s.category === 'Advanced Building Tech')
+                              .map((service) => (
+                                <a
+                                  className="group flex flex-col gap-0.5 p-1.5 transition hover:bg-surface-muted focus:outline-none focus:bg-surface-muted rounded"
+                                  href={service.href}
+                                  key={service.id}
+                                  role="menuitem"
+                                  onClick={() => setDropdownOpen(false)}
+                                >
+                                  <span className="font-display text-base uppercase tracking-wide text-ink group-hover:text-brand-blue transition-colors">
+                                    {service.title}
+                                  </span>
+                                  <span className="font-body text-sm text-ink-muted leading-tight">
+                                    {service.description}
+                                  </span>
+                                </a>
+                              ))}
+                          </div>
+                        </div>
+
+                        {/* Column 4: Power & Industrial Services */}
+                        <div>
+                          <h4 className="font-mono text-sm font-bold uppercase tracking-widest text-brand-red border-b border-line pb-2 mb-3">
+                            Power & Services
+                          </h4>
+                          <div className="grid gap-3">
+                            {dropdownServices
+                              .filter((s) => s.category === 'Power & Electrical Systems' || s.category === 'Industrial Services')
+                              .map((service) => (
+                                <a
+                                  className="group flex flex-col gap-0.5 p-1.5 transition hover:bg-surface-muted focus:outline-none focus:bg-surface-muted rounded"
+                                  href={service.href}
+                                  key={service.id}
+                                  role="menuitem"
+                                  onClick={() => setDropdownOpen(false)}
+                                >
+                                  <span className="font-display text-base uppercase tracking-wide text-ink group-hover:text-brand-blue transition-colors">
+                                    {service.title}
+                                  </span>
+                                  <span className="font-body text-sm text-ink-muted leading-tight">
+                                    {service.description}
+                                  </span>
+                                </a>
+                              ))}
+                          </div>
+                        </div>
                       </div>
                     </div>
                   )}
@@ -184,25 +270,102 @@ export function Navbar() {
                       />
                     </button>
                     {mobileDropdownOpen && (
-                      <div className="pl-4 grid gap-1 border-l-2 border-brand-blue/30 bg-surface-muted/30 mt-1">
-                        {dropdownServices.map((service) => (
-                          <a
-                            className="flex flex-col py-2.5 pr-3"
-                            href={service.href}
-                            key={service.id}
-                            onClick={() => {
-                              setMobileOpen(false)
-                              setMobileDropdownOpen(false)
-                            }}
-                          >
-                            <span className="font-display text-sm uppercase tracking-wide text-ink">
-                              {service.title}
-                            </span>
-                            <span className="font-body text-sm text-ink-muted leading-relaxed mt-0.5">
-                              {service.description}
-                            </span>
-                          </a>
-                        ))}
+                      <div className="pl-4 grid gap-4 border-l-2 border-brand-blue/30 bg-surface-muted/30 mt-1 py-2 max-h-[50vh] overflow-y-auto">
+                        {/* Group 1: Mechanical & Fluid */}
+                        <div>
+                          <h5 className="font-mono text-sm font-bold uppercase tracking-widest text-brand-red mb-1 border-b border-line/20 pb-0.5">
+                            Mechanical & Fluid
+                          </h5>
+                          {dropdownServices
+                            .filter((s) => s.category === 'Mechanical & Fluid Systems')
+                            .map((service) => (
+                              <a
+                                className="flex flex-col py-2"
+                                href={service.href}
+                                key={service.id}
+                                onClick={() => {
+                                  setMobileOpen(false)
+                                  setMobileDropdownOpen(false)
+                                }}
+                              >
+                                <span className="font-display text-sm uppercase tracking-wide text-ink">
+                                  {service.title}
+                                </span>
+                              </a>
+                            ))}
+                        </div>
+
+                        {/* Group 2: Technical Rooms */}
+                        <div>
+                          <h5 className="font-mono text-sm font-bold uppercase tracking-widest text-brand-red mb-1 border-b border-line/20 pb-0.5">
+                            Technical Rooms
+                          </h5>
+                          {dropdownServices
+                            .filter((s) => s.category === 'Technical Environments')
+                            .map((service) => (
+                              <a
+                                className="flex flex-col py-2"
+                                href={service.href}
+                                key={service.id}
+                                onClick={() => {
+                                  setMobileOpen(false)
+                                  setMobileDropdownOpen(false)
+                                }}
+                              >
+                                <span className="font-display text-sm uppercase tracking-wide text-ink">
+                                  {service.title}
+                                </span>
+                              </a>
+                            ))}
+                        </div>
+
+                        {/* Group 3: Advanced Building */}
+                        <div>
+                          <h5 className="font-mono text-sm font-bold uppercase tracking-widest text-brand-red mb-1 border-b border-line/20 pb-0.5">
+                            Advanced Building
+                          </h5>
+                          {dropdownServices
+                            .filter((s) => s.category === 'Advanced Building Tech')
+                            .map((service) => (
+                              <a
+                                className="flex flex-col py-2"
+                                href={service.href}
+                                key={service.id}
+                                onClick={() => {
+                                  setMobileOpen(false)
+                                  setMobileDropdownOpen(false)
+                                }}
+                              >
+                                <span className="font-display text-sm uppercase tracking-wide text-ink">
+                                  {service.title}
+                                </span>
+                              </a>
+                            ))}
+                        </div>
+
+                        {/* Group 4: Power & Industrial Services */}
+                        <div>
+                          <h5 className="font-mono text-sm font-bold uppercase tracking-widest text-brand-red mb-1 border-b border-line/20 pb-0.5">
+                            Power & Services
+                          </h5>
+                          {dropdownServices
+                            .filter((s) => s.category === 'Power & Electrical Systems' || s.category === 'Industrial Services')
+                            .map((service) => (
+                              <a
+                                className="flex flex-col py-2"
+                                href={service.href}
+                                key={service.id}
+                                onClick={() => {
+                                  setMobileOpen(false)
+                                  setMobileDropdownOpen(false)
+                                }}
+                              >
+                                <span className="font-display text-sm uppercase tracking-wide text-ink">
+                                  {service.title}
+                                </span>
+                              </a>
+                            ))}
+                        </div>
                       </div>
                     )}
                   </div>

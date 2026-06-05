@@ -9,6 +9,11 @@ const portfolioLinks: Record<string, string> = {
   'Access Floor Systems': '#/services/raised-flooring',
   'Radiant HVAC Solutions': '#/services/radiant-climate',
   'Smart Glass Glazing': '#/services/smart-glass',
+  'Control Consoles': '#/services/control-consoles',
+  'Battery Storage (BESS)': '#/services/battery-storage',
+  'Heat Exchangers': '#/services/heat-exchangers',
+  'Electrical & Instrumentation': '#/services/electrical-instrumentation',
+  'Specialized Services': '#/services/specialized-services',
 }
 
 export function PortfolioSection() {
@@ -21,7 +26,7 @@ export function PortfolioSection() {
             <SectionHeading id="portfolio-heading">Core Industrial Systems</SectionHeading>
           </Reveal>
         </div>
-        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {portfolioItems.map((item, index) => (
             <Reveal delay={index * 0.08} key={item.title}>
               <a

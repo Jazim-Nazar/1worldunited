@@ -12,7 +12,7 @@ export function Footer() {
             <LogoLockup inverted />
             <p className="mt-5 max-w-sm font-body text-sm leading-6 text-white/45">General Trading & Contracting Co. W.L.L.</p>
             <div className="mt-8 flex gap-2">
-              <a aria-label="Instagram" className="grid size-9 place-items-center border border-white/20 text-white/70 hover:text-white focus:outline-none focus:ring-2 focus:ring-brand-blue" href="#">
+              <a aria-label="Gmail" className="grid size-9 place-items-center border border-white/20 text-white/70 hover:text-white focus:outline-none focus:ring-2 focus:ring-brand-blue" href="https://mail.google.com/mail/?view=cm&fs=1&to=projects@1worldunited.com" target="_blank" rel="noopener noreferrer">
                 <Mail aria-hidden size={15} />
               </a>
               <a aria-label="Website" className="grid size-9 place-items-center border border-white/20 text-white/70 hover:text-white focus:outline-none focus:ring-2 focus:ring-brand-blue" href="#">
