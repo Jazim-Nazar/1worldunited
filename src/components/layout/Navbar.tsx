@@ -88,7 +88,7 @@ export function Navbar() {
                   <button
                     aria-expanded={dropdownOpen}
                     aria-haspopup="true"
-                    className="flex items-center gap-1.5 font-mono text-xs md:text-[13px] font-bold uppercase tracking-[0.12em] text-ink transition hover:text-brand-blue focus:outline-none focus:ring-2 focus:ring-brand-blue"
+                    className="flex items-center gap-1.5 font-mono text-sm font-bold uppercase tracking-[0.12em] text-ink transition hover:text-brand-blue focus:outline-none focus:ring-2 focus:ring-brand-blue"
                     onClick={() => setDropdownOpen(!dropdownOpen)}
                     type="button"
                   >
@@ -136,7 +136,7 @@ export function Navbar() {
 
             return (
               <a
-                className="relative font-mono text-xs md:text-[13px] font-bold uppercase tracking-[0.12em] text-ink transition hover:text-brand-blue focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2"
+                className="relative font-mono text-sm font-bold uppercase tracking-[0.12em] text-ink transition hover:text-brand-blue focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2"
                 href={item.href}
                 key={item.label}
                 onClick={(e) => handleNavClick(e, item.href)}
@@ -195,7 +195,7 @@ export function Navbar() {
                               setMobileDropdownOpen(false)
                             }}
                           >
-                            <span className="font-display text-[13px] uppercase tracking-wide text-ink">
+                            <span className="font-display text-sm uppercase tracking-wide text-ink">
                               {service.title}
                             </span>
                             <span className="font-body text-sm text-ink-muted leading-relaxed mt-0.5">
