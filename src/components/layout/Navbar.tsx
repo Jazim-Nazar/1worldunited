@@ -21,6 +21,55 @@ export function Navbar() {
     return () => document.removeEventListener('mousedown', handleClickOutside)
   }, [])
 
+  // Desktop smooth scroll click interceptor
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    const isHomePage = !window.location.hash.startsWith('#/services/')
+
+    if (href === '#/') {
+      if (isHomePage) {
+        e.preventDefault()
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+        window.history.pushState(null, '', '#/')
+      }
+    } else if (href.startsWith('#/#')) {
+      const sectionId = href.split('#/#')[1]
+      if (isHomePage) {
+        e.preventDefault()
+        const element = document.getElementById(sectionId)
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+          window.history.pushState(null, '', `#/#${sectionId}`)
+        }
+      }
+    }
+  }
+
+  // Mobile smooth scroll click interceptor (closes drawer)
+  const handleMobileNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    setMobileOpen(false)
+    const isHomePage = !window.location.hash.startsWith('#/services/')
+
+    if (href === '#/') {
+      if (isHomePage) {
+        e.preventDefault()
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+        window.history.pushState(null, '', '#/')
+      }
+    } else if (href.startsWith('#/#')) {
+      const sectionId = href.split('#/#')[1]
+      if (isHomePage) {
+        e.preventDefault()
+        const element = document.getElementById(sectionId)
+        if (element) {
+          setTimeout(() => {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+          }, 150) // Small delay to let the drawer close transition start
+          window.history.pushState(null, '', `#/#${sectionId}`)
+        }
+      }
+    }
+  }
+
   return (
     <header className="sticky top-0 z-50 border-b border-line bg-white/95 backdrop-blur-md" id="home">
       <Container className="flex h-16 items-center justify-between gap-4">
@@ -39,7 +88,7 @@ export function Navbar() {
                   <button
                     aria-expanded={dropdownOpen}
                     aria-haspopup="true"
-                    className="flex items-center gap-1.5 font-mono text-sm md:text-sm font-bold uppercase tracking-[0.12em] text-ink transition hover:text-brand-blue focus:outline-none focus:ring-2 focus:ring-brand-blue"
+                    className="flex items-center gap-1.5 font-mono text-xs md:text-[13px] font-bold uppercase tracking-[0.12em] text-ink transition hover:text-brand-blue focus:outline-none focus:ring-2 focus:ring-brand-blue"
                     onClick={() => setDropdownOpen(!dropdownOpen)}
                     type="button"
                   >
@@ -87,9 +136,10 @@ export function Navbar() {
 
             return (
               <a
-                className="relative font-mono text-sm md:text-sm font-bold uppercase tracking-[0.12em] text-ink transition hover:text-brand-blue focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2"
+                className="relative font-mono text-xs md:text-[13px] font-bold uppercase tracking-[0.12em] text-ink transition hover:text-brand-blue focus:outline-none focus:ring-2 focus:ring-brand-blue focus:ring-offset-2"
                 href={item.href}
                 key={item.label}
+                onClick={(e) => handleNavClick(e, item.href)}
               >
                 {item.label}
               </a>
@@ -145,7 +195,7 @@ export function Navbar() {
                               setMobileDropdownOpen(false)
                             }}
                           >
-                            <span className="font-display text-sm uppercase tracking-wide text-ink">
+                            <span className="font-display text-[13px] uppercase tracking-wide text-ink">
                               {service.title}
                             </span>
                             <span className="font-body text-sm text-ink-muted leading-relaxed mt-0.5">
@@ -164,7 +214,7 @@ export function Navbar() {
                   className="border-b border-line/50 py-4 font-mono text-sm font-bold uppercase tracking-[0.12em] text-ink"
                   href={item.href}
                   key={item.label}
-                  onClick={() => setMobileOpen(false)}
+                  onClick={(e) => handleMobileNavClick(e, item.href)}
                 >
                   {item.label}
                 </a>
