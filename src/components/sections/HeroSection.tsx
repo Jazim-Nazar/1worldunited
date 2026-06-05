@@ -1,10 +1,22 @@
 import { Container } from '../layout/Container'
 import { Reveal } from '../ui/Reveal'
+import heroBg from '../../assets/images/hero-bg.jpg'
 
 export function HeroSection() {
   return (
-    <section className="bg-brand-black text-white">
-      <Container className="flex min-h-[330px] flex-col items-center justify-center py-24 text-center sm:min-h-[470px] sm:py-32 lg:min-h-[620px]">
+    <section className="relative bg-brand-black text-white overflow-hidden">
+      {/* Background Image with Black Tint Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img 
+          src={heroBg} 
+          alt="Kuwait Skyline at Sunset" 
+          className="w-full h-full object-cover object-top opacity-75"
+        />
+        {/* Black Tint Overlay */}
+        <div className="absolute inset-0 bg-brand-black/60" />
+      </div>
+
+      <Container className="relative z-10 flex min-h-[330px] flex-col items-center justify-center py-24 text-center sm:min-h-[470px] sm:py-32 lg:min-h-[620px]">
         <Reveal>
           <h1 className="max-w-5xl font-display text-hero uppercase">
             Engineering The Future
